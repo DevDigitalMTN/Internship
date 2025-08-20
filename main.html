@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for proper character encoding and responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page Title -->
+    <title>My Awesome Webpage</title>
+
+    <!-- Open Graph Meta Tags for link preview -->
+    <meta property="og:title" content="Cool Bundles" />
+    <meta property="og:description" content="Check out this amazing content !" />
+    
+    <!-- Important: Full URL to the image for preview -->
+    <meta property="og:image" content="https://res.cloudinary.com/dlfmnem2s/image/upload/v1755716369/internship_p5rzjk.jpg" />
+    
+    <!-- Optional but recommended: specify image dimensions -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- The actual URL of the page being shared -->
+    <meta property="og:url" content="https://res.cloudinary.com/dlfmnem2s/image/upload/v1755716369/internship_p5rzjk.jpg" />
+    
+    <!-- Website type -->
+    <meta property="og:type" content="website" />
+
+    <!-- Optional: Name of the website or app -->
+    <meta property="og:site_name" content="MTN SYR" />
+
+    <!-- Optional: Twitter Card tags if you'd like a Twitter-specific preview -->
+    <meta name="twitter:card" content="large_image">
+    <meta name="twitter:title" content="Internship Program">
+    <meta name="twitter:description" content="Check out this amazing content and insights!">
+    <meta name="twitter:image" content="https://res.cloudinary.com/dlfmnem2s/image/upload/v1755716369/internship_p5rzjk.jpg">
+    
+</head>
+<body>
+    <!-- Redirection Script -->
+    <script>
+    setTimeout(function () {
+        // Change this to the email you want to open
+        var email = "internship@mtn.com.sy";  
+
+        // Try to open the user's default mail client
+        window.location.href = "mailto:" + email;
+
+        // As a fallback, redirect to Gmail (or another webmail)
+        setTimeout(function () {
+            // Detect if user is on mobile (where mailto usually works)
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (!isMobile) {
+                // Redirect to Gmail web if on desktop
+                window.location.href = "https://mail.google.com/mail/?view=cm&fs=1&to=" + email;
+            }
+        }, 1500);
+    }, 10);
+</script>
+
+    <!-- Optional message to inform users -->
+    <p>You will be redirected in 1 seconds...</p>
+</body>
+</html>
